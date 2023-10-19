@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+
+
+}
+.wrapper{
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0, 0.1),
+                0 32px 64px -48px rgba(0,0,0, 0.5);
+
+}
+/*signup*/
+.form{
+    padding: 25px 30px;
+}
+.form header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+.form form{
+   margin:  20 px 0;
+
+}
+.form form .error-txt{
+    display: none;
+    color: #721c24;
+    background: #f8d7da;
+    padding:  8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    
+
+}
+.form form .user-details{
+    display: flex;
+}
+form .user-details .field:first-child{
+    margin-right: 10px;
+     
+}
+form .user-details .field:last-child{
+    margin-left: 10px;
+     
+}
+.form form .field{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form form .field label{
+    margin-bottom: 2px;
+}
+.form form .input input{
+    outline: none
+}
+.form form .input input{
+    height: 40px;
+    width:100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+
+}
+.form form .picture input{
+    font-size:17px;
+
+}
+.form form .button input{
+    margin-top: 13px;
+    height: 45px;
+    border : none;
+    font-size: 17px;
+    font-weight: 500;
+    background: #333;
+    color:#fafafa;
+    border-radius:5px ;
+    cursor: pointer;
+}
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.form form .field i.active::before{
+    content: "\f070";
+    color:#333;
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+
+}
+.form .link a{
+    color:#333;
+}
+.form .link a:hover{
+    text-decoration: underline;
+    color: lightblue;
+}
+/*utilusateurData*/
+.utilisateur{
+    padding:25px 30px ;
+
+}
+.utilisateur header,
+.list-utilisateurs a
+{
+    display:flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+
+}.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+:is(.utilisateur,.list-utilisateurs) .content{
+    display: flex;
+    align-items: center;
+}
+
+.utilisateur header .content img{
+    height: 50px;
+    width:50px;
+}
+:is(.utilisateur,.list-utilisateurs)  .details{
+    color:#000 ;
+    margin-left: 15px;
+}
+:is(.utilisateur,.list-utilisateurs) .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.utilisateur header .logout{
+    color:#fafafa;
+    font-size: 17px;
+    padding: 7px 15px;
+    background: #333;
+    border-radius: 5px;
+}
+.utilisateur .search{
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.utilisateur .search .text{
+    font-size: 18px;
+
+}
+.utilisateur .search input{
+    position: absolute;
+    height: 42px;
+    width: calc(100%-50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.utilisateur .search input.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+.utilisateur .search button{
+    width :47px;
+    height: 42px;
+    border :none;
+    outline: none;
+    color:#333;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+
+
+}
+
+.utilisateur .search button.active{
+    color:#fff;
+    background: #333;
+}
+.utilisateur .search button.active i::before{
+    content: "\f00d";
+}
+.list-utilisateurs{
+    max-height: 350px;
+    overflow-y: auto;
+}
+:is(.list-utilisateurs,.chat-box)::-webkit-scrollbar{
+     width: 0px;
+}
+
+.list-utilisateurs a{
+    margin-bottom: 10px;
+    page-break-after: 10px;
+    padding-right:15px ;
+    border-bottom-color:#f1f1f1 ;
+}
+.list-utilisateurs a .content img{
+height: 40px;
+width: 40px;
+}
+.list-utilisateurs a .content p{
+    color:#67676a;
+}
+.list-utilisateurs a .status-point{
+    font-size: 12px;
+    color: #468669;
+}
+.list-utilisateurs a .status-point.offline{
+    color:#ccc;
+}
+
+/*chat css style*/
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+
+}
+.chat-area header .return{
+    font-size: 18px;
+    color :#333;
+}
+.chat-area header img{
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+.chat-area header span{
+   font-size: 17px;
+   font-weight: 500; 
+}
+.chat-box{
+
+    height: 500px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgba(0 0 0 / 5%),
+                inset 0 -32px 32px 32px rgba(0 0 0 / 5%) ;
+}
+.chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgba(0 0 0 / 8%),
+                0 16px 16px -16px rgba(0 0 0 / 10%);
+}
+.chat-box .chat {
+    margin: 15px 0 ;
+ }
+
+.chat-box .outgoing{
+    display:flex;
+}
+.outgoing .details{
+    margin-left:auto ;
+    max-width: calc(100%-130px);
+}
+.outgoing .details p{
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+
+}
+.chat-box .coming{
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .coming img{
+    height: 35px;
+    width:35px;
+
+}
+.coming .details{
+    margin-left: 10px;
+    margin-right:auto ;
+    max-width: calc(100%-130px);
+}
+.coming .details p{
+    color: #333;
+    background: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: calc(100%-58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+     
+}
+.typing-area button{
+    width: 55PX;
+    border:none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor:pointer;
+    border-radius: 5px 0 5px 0 ;
+    
+}
+.transparent-trash-icon {
+    background: none;
+    border: none;
+    font-size: 8px; /* Customize the size as needed */
+    color: gray; /* Make the icon transparent */
+    cursor: pointer;
+    margin-top: 40px;
+}
+
